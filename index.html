@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betion USA - 日本人向けスタンフォード大学・UCバークレーサマーキャンプ [メンテナンス中]</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* メインカラー定義 */
+        :root {
+            --primary-color: #0055ff; /* より鮮やかな青 */
+            --secondary-color: #003366; /* ダークブルー */
+            --accent-color: #ff5500; /* アクセントオレンジ */
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            background-color: #0055ff; /* より鮮やかな青色 */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            animation: dropDown 1.2s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: dropDown 1.2s ease-out 0.3s backwards;
+        }
+        
+        @keyframes dropDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            animation: dropDown 1.2s ease-out 0.6s backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* メンテナンスバナー */
+        .maintenance-banner {
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+            font-weight: 600;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 2000;
+        }
+
+        .navbar {
+            top: 56px; /* メンテナンスバナーの高さ */
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- メンテナンスバナー -->
+    <div class="maintenance-banner">
+        <i class="fas fa-exclamation-triangle"></i> お知らせ: betion-usa.com は現在サーバーメンテナンス中です。これは臨時サイトです。
+    </div>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <a href="#" class="logo">Betion <span>USA</span></a>
+        <ul class="nav-links">
+            <li><a href="#">ホーム</a></li>
+        </ul>
+    </nav>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="hero-content">
+            <h1 class="hero-title">アメリカ名門大学で学ぶ、未来を創るサマーキャンプ</h1>
+            <h2 class="hero-subtitle">スタンフォード大学・UCバークレー大学で過ごす特別な夏</h2>
+            <div class="cta-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0AifUH8UaXxHsZgNMwFWl80iW88cSfr2cRQCOMjPod7zOow/viewform?pli=1" class="btn btn-primary">お申し込みはこちら</a>
+                <a href="https://drive.google.com/file/d/1focnJS3tKTiawoYg0vryvwkejFecyQhv/view" class="btn btn-secondary">資料請求</a>
+            </div>
+        </div>
+        <img src="/api/placeholder/1200/600" alt="プログラミングを学ぶ学生たち" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; opacity: 0.4;">
+    </header>
+
+    <!-- 会社概要 -->
+    <section style="background-color: var(--light-gray); padding: 3rem 1rem; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--secondary-color);">会社概要</h2>
+            <div style="background-color: var(--white); padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); text-align: left;">
+                <p style="margin-bottom: 1rem;"><strong>Betion USA, Inc.</strong> 830 Stewart Drive, Suite 204, Sunnyvale, CA, 94085</p>
+                <p style="margin-bottom: 1rem;"><strong>E-mail: info@betion-usa.com　（お気軽にお問合せください！）</strong> <br>HP：betion-usa.com（現在メンテナンス中のためアクセスできません）</p>
+                <p style="margin-bottom: 1rem;"><strong>Betion USAは、アメリカ・カリフォルニア州司法局に登録されたISEVPO（留学生交流プログラム運営機関）です。</strong> 公式リスト（<a href="https://oag.ca.gov/exchangestudents/registry-list" style="color: var(--primary-color); text-decoration: underline;">登録機関一覧はこちら</a>）にも掲載されており、<strong>アメリカで合法的に活動する認可団体</strong>として安心してご利用いただけます。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- スクリプト -->
+    <script>
+        // メンテナンス中のサイトであることを示すメッセージ
+        console.log('Betion USA臨時サイト - サーバーメンテナンス中');
+    </script>
+</body>
+</html>
